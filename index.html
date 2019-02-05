@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Enter Base64 Encoded URL:</p>
+<input type="text" id="encoded_url" value="">
+<button onclick="decode()">Go</button>
+</br>
+</br>
+<button onclick="clipboard()">Decode Clipboard</button>
+</br>
+</br>
+<p>Created By @shmadul 2019</p>
+<script>
+function clipboard() {
+navigator.clipboard.readText()
+  .then(clipboard => {
+	var decoded_url = atob(clipboard);
+	window.open(decoded_url);
+  })
+  .catch(err => {
+    window.alert('Please Allow Clipboard Access', err);
+  });
+}
+
+function decode() {
+var encoded_url = document.getElementById("encoded_url").value;
+var decoded_url = atob(encoded_url);
+window.open(decoded_url);
+}
+</script>
+
+</body>
+</html>
