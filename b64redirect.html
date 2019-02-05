@@ -9,7 +9,7 @@ navigator.clipboard.readText()
 	window.open(decoded_url);
   })
   .catch(err => {
-    window.alert('Please Allow Clipboard Access', err);
+    window.alert('Unable to access Clipboard, Or No Base64 text detected', err);
   });
 </script>
 
