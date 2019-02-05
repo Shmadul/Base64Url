@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Created By @shmadul 2019</p>
+<script>
+navigator.clipboard.readText()
+  .then(clipboard => {
+	var decoded_url = atob(clipboard);
+	window.open(decoded_url);
+  })
+  .catch(err => {
+    window.alert('Please Allow Clipboard Access', err);
+  });
+}
+</script>
+
+</body>
+</html>
